@@ -101,6 +101,8 @@ SinaisDrawPane::SinaisDrawPane(wxWindow* parent) : wxPanel(parent)
     wxColour corDeFundoSis = sisConfig.GetColour(wxSYS_COLOUR_BACKGROUND);
     wxColour preto("black");
     wxColour branco("white");
+    wxColour azul_claro("light blue");
+    wxColour azul_escuro("dark blue");
     
     if ( corDeFundoSis.Red() > 100 &&
          corDeFundoSis.Green() > 100 &&
@@ -108,11 +110,13 @@ SinaisDrawPane::SinaisDrawPane(wxWindow* parent) : wxPanel(parent)
     {
         corDoTexto = preto;
         corDaLinha = preto;
+        timeLineColor = azul_escuro;
     }
     else
     {
         corDoTexto = branco;
         corDaLinha = branco;
+        timeLineColor = azul_claro;
     }
 }
 
@@ -195,7 +199,7 @@ void SinaisDrawPane::drawGrid(wxDC& canvas, int x0, int y0, int height)
     // font for the time axis numbering
     wxFont font(8, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL);
     canvas.SetFont(font);
-    canvas.SetTextForeground(*wxBLUE);
+    canvas.SetTextForeground(*timeLineColor);
 
     // draw vertical lines and time axis numbering
     for ( int j=0 ; j < maxVerticalLines  ; j++ )

@@ -57,6 +57,7 @@ private:
 
     wxColour corDoTexto;
     wxColour corDaLinha;
+    wxColour timeLineColor;
     
     int horizontSize = 15; // comprimeto horizontal de uma unidade de tempo
     int verticalSize = 15; // altura de um pulso entre 0 e 1
