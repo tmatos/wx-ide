@@ -1,0 +1,23 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "run make release",
+            "command": "make clean && make",
+            "args": [],
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "run make debug",
+            "command": "make clean && make debug",
+            "args": [],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

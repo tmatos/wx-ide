@@ -16,6 +16,9 @@ OBJ = $(patsubst %, $(OBJ_DIR)/%, $(_OBJ))
 
 default: makedir all
 
+debug: CXXFLAGS += -g -O0
+debug: default
+
 $(TARGET): $(OBJ)
 	$(CXX) -o $@ $^ $(LFLAGS)
 
