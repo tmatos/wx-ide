@@ -1,0 +1,3 @@
+[submodule "progres"]
+	path = progres
+	url = https://github.com/tmatos/progres.git

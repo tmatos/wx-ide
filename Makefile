@@ -1,6 +1,6 @@
 
 OBJ_DIR=obj
-C_DIR=../src
+C_DIR=./progres/src
 
 CC=gcc
 CXX=g++
